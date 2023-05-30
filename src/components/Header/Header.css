@@ -12,6 +12,7 @@
     border: 1px solid #ddd;
     z-index: 1;
     color: black;
+    padding-right: 10px;
 }
 
 .dropdown:hover .dropdown-content {
