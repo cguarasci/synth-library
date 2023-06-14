@@ -9,6 +9,7 @@ const Inventory = () => {
   const [pickupData, setPickupData] = useState(null);
   const [inventoryData, setInventoryData] = useState(null);
   const [selectedItemIndex, setSelectedItemIndex] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
   const popupRef = useRef(null);
 
   document.documentElement.style.setProperty('--body-background-color', '#E4D3FF');
@@ -40,14 +41,70 @@ const Inventory = () => {
     setSelectedItemIndex(null);
     setPopupVisible(false);
   };
+
+  const handleSearchInputChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const filteredInventory = inventoryData?.inventory.filter((item) =>
+    item.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item.type.toLowerCase().includes(searchQuery.toLowerCase())
+  ) || [];
   
   return (
     <div style={{ minHeight: '150vh' }}>
         <Header activePage="Inventory" />
         <div style={{ marginTop: '150px' }}>
-          {/* Search bar goes here */}
+          <div style={{ position: 'relative', marginBottom: '20px' }}>
+            <img style={{ position: 'absolute', marginTop: '10px' }} className="mono-cable" src={process.env.PUBLIC_URL + '/images/mono-cable.png'} alt="Mono Cable" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={handleSearchInputChange}
+              placeholder="Search..."
+              style={{
+                position: 'relative',
+                background: 'black',
+                color: 'white',
+                width: '300px',
+                height: '30px',
+                marginLeft: '80px',
+                borderRadius: '10px',
+                padding: '10px',
+                fontSize: '16px',
+                border: 'none',
+                outline: 'none',
+                zIndex: '0'
+              }}
+              placeholderStyle={{
+                color: 'white',
+                fontSize: '18px'
+              }}
+            />
+            <div
+              style={{
+                position: 'absolute',
+                top: '50%',
+                right: '-30px',
+                width: 'calc(100% - 350px)',
+                height: '100%',
+                zIndex: '-1',
+                transform: 'translateY(-50%)'
+              }}
+            >
+              <svg viewBox="0 -10 2000 300">
+                <path
+                  d="M0,50 C250,100 250,0 500,0 S750,100 1000,100 1250,0 1500,0 S1750,100 2000,100"
+                  fill="none"
+                  stroke="black"
+                  strokeWidth="10"
+                />
+              </svg>
+            </div>
+          </div>
           <div className="panel-array">
-            {inventoryData?.inventory.map((item, index) => (
+            {filteredInventory.map((item, index) => (
                 <div
                   key={index}
                   className="panel"
@@ -105,47 +162,3 @@ const Inventory = () => {
 };
 
 export default Inventory;
-
-// import './Inventory.css';
-// import Header from '../../components/Header/Header';
-
-// const Inventory = () => {
-//   return (
-//     <div style={{ minHeight: '150vh', backgroundColor: '#E4D3FF' }}>
-//         <Header activePage="Inventory" />
-//         <div style={{ display: 'flex', paddingTop: '100px' }}>
-//             {/* <div class="sine-wave"></div> */}
-//             {/* <p style={{}}>Search...</p>
-//             <img style={{ width: '1000px', paddingLeft: '300px' }} src={process.env.PUBLIC_URL + '/images/wave.png'} alt="Wave" /> */}
-//         </div>
-//         <div>
-//             <p>InventoryLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor sagittis dapibus. In eget ipsum orci. Ut ut metus odio. Suspendisse potenti. Nulla volutpat lectus ut ex sollicitudin, ac egestas mauris feugiat. Quisque efficitur eu arcu eget congue. Mauris volutpat elit non sollicitudin aliquet. Pellentesque ac sem eget enim lacinia sollicitudin id id turpis. Nulla elementum est at dolor pretium ullamcorper.</p>
-//             <p>InventoryNunc accumsan ipsum elit, id hendrerit sem vestibulum et. Praesent eu ligula vitae velit scelerisque malesuada. Vivamus rhoncus vulputate arcu ut suscipit. Aliquam erat volutpat. Duis varius dui at nibh eleifend, ac ultrices nisl tristique. Vivamus tempor iaculis cursus. Donec gravida fringilla odio. In hac habitasse platea dictumst.</p>
-//             <p>InventoryPhasellus mattis viverra felis, sed vulputate felis efficitur at. Aliquam eu facilisis lorem, sed aliquam velit. Sed ut sapien sed urna consectetur dignissim. Donec at lobortis ligula. Nullam varius velit vitae vestibulum vestibulum. Curabitur quis cursus ex, in luctus felis. Sed interdum fringilla dui sed tempor.</p>
-//             <p>InventoryLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor sagittis dapibus. In eget ipsum orci. Ut ut metus odio. Suspendisse potenti. Nulla volutpat lectus ut ex sollicitudin, ac egestas mauris feugiat. Quisque efficitur eu arcu eget congue. Mauris volutpat elit non sollicitudin aliquet. Pellentesque ac sem eget enim lacinia sollicitudin id id turpis. Nulla elementum est at dolor pretium ullamcorper.</p>
-//             <p>InventoryNunc accumsan ipsum elit, id hendrerit sem vestibulum et. Praesent eu ligula vitae velit scelerisque malesuada. Vivamus rhoncus vulputate arcu ut suscipit. Aliquam erat volutpat. Duis varius dui at nibh eleifend, ac ultrices nisl tristique. Vivamus tempor iaculis cursus. Donec gravida fringilla odio. In hac habitasse platea dictumst.</p>
-//             <p>InventoryPhasellus mattis viverra felis, sed vulputate felis efficitur at. Aliquam eu facilisis lorem, sed aliquam velit. Sed ut sapien sed urna consectetur dignissim. Donec at lobortis ligula. Nullam varius velit vitae vestibulum vestibulum. Curabitur quis cursus ex, in luctus felis. Sed interdum fringilla dui sed tempor.</p>
-//             <p>InventoryLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor sagittis dapibus. In eget ipsum orci. Ut ut metus odio. Suspendisse potenti. Nulla volutpat lectus ut ex sollicitudin, ac egestas mauris feugiat. Quisque efficitur eu arcu eget congue. Mauris volutpat elit non sollicitudin aliquet. Pellentesque ac sem eget enim lacinia sollicitudin id id turpis. Nulla elementum est at dolor pretium ullamcorper.</p>
-//             <p>InventoryNunc accumsan ipsum elit, id hendrerit sem vestibulum et. Praesent eu ligula vitae velit scelerisque malesuada. Vivamus rhoncus vulputate arcu ut suscipit. Aliquam erat volutpat. Duis varius dui at nibh eleifend, ac ultrices nisl tristique. Vivamus tempor iaculis cursus. Donec gravida fringilla odio. In hac habitasse platea dictumst.</p>
-//             <p>InventoryPhasellus mattis viverra felis, sed vulputate felis efficitur at. Aliquam eu facilisis lorem, sed aliquam velit. Sed ut sapien sed urna consectetur dignissim. Donec at lobortis ligula. Nullam varius velit vitae vestibulum vestibulum. Curabitur quis cursus ex, in luctus felis. Sed interdum fringilla dui sed tempor.</p>
-//             <p>InventoryLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor sagittis dapibus. In eget ipsum orci. Ut ut metus odio. Suspendisse potenti. Nulla volutpat lectus ut ex sollicitudin, ac egestas mauris feugiat. Quisque efficitur eu arcu eget congue. Mauris volutpat elit non sollicitudin aliquet. Pellentesque ac sem eget enim lacinia sollicitudin id id turpis. Nulla elementum est at dolor pretium ullamcorper.</p>
-//             <p>InventoryNunc accumsan ipsum elit, id hendrerit sem vestibulum et. Praesent eu ligula vitae velit scelerisque malesuada. Vivamus rhoncus vulputate arcu ut suscipit. Aliquam erat volutpat. Duis varius dui at nibh eleifend, ac ultrices nisl tristique. Vivamus tempor iaculis cursus. Donec gravida fringilla odio. In hac habitasse platea dictumst.</p>
-//             <p>InventoryPhasellus mattis viverra felis, sed vulputate felis efficitur at. Aliquam eu facilisis lorem, sed aliquam velit. Sed ut sapien sed urna consectetur dignissim. Donec at lobortis ligula. Nullam varius velit vitae vestibulum vestibulum. Curabitur quis cursus ex, in luctus felis. Sed interdum fringilla dui sed tempor.</p>
-//             <p>InventoryLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor sagittis dapibus. In eget ipsum orci. Ut ut metus odio. Suspendisse potenti. Nulla volutpat lectus ut ex sollicitudin, ac egestas mauris feugiat. Quisque efficitur eu arcu eget congue. Mauris volutpat elit non sollicitudin aliquet. Pellentesque ac sem eget enim lacinia sollicitudin id id turpis. Nulla elementum est at dolor pretium ullamcorper.</p>
-//             <p>InventoryNunc accumsan ipsum elit, id hendrerit sem vestibulum et. Praesent eu ligula vitae velit scelerisque malesuada. Vivamus rhoncus vulputate arcu ut suscipit. Aliquam erat volutpat. Duis varius dui at nibh eleifend, ac ultrices nisl tristique. Vivamus tempor iaculis cursus. Donec gravida fringilla odio. In hac habitasse platea dictumst.</p>
-//             <p>InventoryPhasellus mattis viverra felis, sed vulputate felis efficitur at. Aliquam eu facilisis lorem, sed aliquam velit. Sed ut sapien sed urna consectetur dignissim. Donec at lobortis ligula. Nullam varius velit vitae vestibulum vestibulum. Curabitur quis cursus ex, in luctus felis. Sed interdum fringilla dui sed tempor.</p>
-//             <p>InventoryLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor sagittis dapibus. In eget ipsum orci. Ut ut metus odio. Suspendisse potenti. Nulla volutpat lectus ut ex sollicitudin, ac egestas mauris feugiat. Quisque efficitur eu arcu eget congue. Mauris volutpat elit non sollicitudin aliquet. Pellentesque ac sem eget enim lacinia sollicitudin id id turpis. Nulla elementum est at dolor pretium ullamcorper.</p>
-//             <p>InventoryNunc accumsan ipsum elit, id hendrerit sem vestibulum et. Praesent eu ligula vitae velit scelerisque malesuada. Vivamus rhoncus vulputate arcu ut suscipit. Aliquam erat volutpat. Duis varius dui at nibh eleifend, ac ultrices nisl tristique. Vivamus tempor iaculis cursus. Donec gravida fringilla odio. In hac habitasse platea dictumst.</p>
-//             <p>InventoryPhasellus mattis viverra felis, sed vulputate felis efficitur at. Aliquam eu facilisis lorem, sed aliquam velit. Sed ut sapien sed urna consectetur dignissim. Donec at lobortis ligula. Nullam varius velit vitae vestibulum vestibulum. Curabitur quis cursus ex, in luctus felis. Sed interdum fringilla dui sed tempor.</p>
-//             <p>InventoryLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor sagittis dapibus. In eget ipsum orci. Ut ut metus odio. Suspendisse potenti. Nulla volutpat lectus ut ex sollicitudin, ac egestas mauris feugiat. Quisque efficitur eu arcu eget congue. Mauris volutpat elit non sollicitudin aliquet. Pellentesque ac sem eget enim lacinia sollicitudin id id turpis. Nulla elementum est at dolor pretium ullamcorper.</p>
-//             <p>InventoryNunc accumsan ipsum elit, id hendrerit sem vestibulum et. Praesent eu ligula vitae velit scelerisque malesuada. Vivamus rhoncus vulputate arcu ut suscipit. Aliquam erat volutpat. Duis varius dui at nibh eleifend, ac ultrices nisl tristique. Vivamus tempor iaculis cursus. Donec gravida fringilla odio. In hac habitasse platea dictumst.</p>
-//             <p>InventoryPhasellus mattis viverra felis, sed vulputate felis efficitur at. Aliquam eu facilisis lorem, sed aliquam velit. Sed ut sapien sed urna consectetur dignissim. Donec at lobortis ligula. Nullam varius velit vitae vestibulum vestibulum. Curabitur quis cursus ex, in luctus felis. Sed interdum fringilla dui sed tempor.</p>
-//             <p>InventoryLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor sagittis dapibus. In eget ipsum orci. Ut ut metus odio. Suspendisse potenti. Nulla volutpat lectus ut ex sollicitudin, ac egestas mauris feugiat. Quisque efficitur eu arcu eget congue. Mauris volutpat elit non sollicitudin aliquet. Pellentesque ac sem eget enim lacinia sollicitudin id id turpis. Nulla elementum est at dolor pretium ullamcorper.</p>
-//             <p>InventoryNunc accumsan ipsum elit, id hendrerit sem vestibulum et. Praesent eu ligula vitae velit scelerisque malesuada. Vivamus rhoncus vulputate arcu ut suscipit. Aliquam erat volutpat. Duis varius dui at nibh eleifend, ac ultrices nisl tristique. Vivamus tempor iaculis cursus. Donec gravida fringilla odio. In hac habitasse platea dictumst.</p>
-//             <p>InventoryPhasellus mattis viverra felis, sed vulputate felis efficitur at. Aliquam eu facilisis lorem, sed aliquam velit. Sed ut sapien sed urna consectetur dignissim. Donec at lobortis ligula. Nullam varius velit vitae vestibulum vestibulum. Curabitur quis cursus ex, in luctus felis. Sed interdum fringilla dui sed tempor.</p>
-//         </div>
-//     </div>
-//   );
-// };
-
-// export default Inventory;
