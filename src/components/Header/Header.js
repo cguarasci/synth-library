@@ -4,7 +4,7 @@ import './Header.css';
 const Header = ({ activePage }) => {
   return (
     <header style={{ display: 'flex', justifyContent: 'space-between', gap: '20px', alignItems: 'center', position: 'fixed', top: 0, minHeight: '90px', width: '100%', backgroundColor: '#000000E6', color: '#fff', padding: '0 20px' }}>
-      <h1>Synth Library Orlando</h1>
+      <h1 style={{ fontFamily: 'Kaushan Script' }}>Synth Library Orlando</h1>
       <div style={{ display: 'flex', gap: '20px', alignItems: 'center', marginRight: '50px', position: 'relative' }}>
         <a href="/home" className={`white-link ${activePage === 'Home' ? 'active' : ''}`}>Home</a>
         <p>|</p>
