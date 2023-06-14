@@ -34,15 +34,15 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 25px;
 }
 
 .panel {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 350px;
-    border-radius: 10%;
+    width: 200px;
+    height: 250px;
+    border-radius: 5%;
     margin: 30px;
     padding: 20px;
     justify-content: space-between;
@@ -58,8 +58,8 @@
 .panel-image {
     align-self: center;
     padding: 30px 0;
-    max-width: 250px;
-    max-height: 200px;
+    max-width: 175px;
+    max-height: 125px;
     width: fit-content;
 }
 
@@ -109,7 +109,7 @@
     background-color: #EBEBEB;
     padding: 0 10px;
     border: none;
-  }
+}
   
 
 /* @keyframes sine-wave-animation {

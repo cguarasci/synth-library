@@ -11,6 +11,8 @@ const Inventory = () => {
   const [selectedItemIndex, setSelectedItemIndex] = useState(null);
   const popupRef = useRef(null);
 
+  document.documentElement.style.setProperty('--body-background-color', '#E4D3FF');
+
   useEffect(() => {
     setPickupData(pickupInfo);
     setInventoryData(inventoryInfo);
@@ -40,9 +42,11 @@ const Inventory = () => {
   };
   
   return (
-    <div style={{ minHeight: '150vh', backgroundColor: '#E4D3FF' }}>
+    <div style={{ minHeight: '150vh' }}>
         <Header activePage="Inventory" />
-        <div className="panel-array">
+        <div style={{ marginTop: '150px' }}>
+          {/* Search bar goes here */}
+          <div className="panel-array">
             {inventoryData?.inventory.map((item, index) => (
                 <div
                   key={index}
@@ -52,49 +56,50 @@ const Inventory = () => {
                   <div className="more-info-button">More Info +</div>
                   <img className="panel-image" src={process.env.PUBLIC_URL + '/images/inventory/' + item.image} alt="Sample Synth 1" />
                   <div className="item-info">
-                    <p style={{ fontStyle: 'italic', fontSize: 20, margin: 0, marginBottom: '10px' }}>{item.brand} {item.name}</p>
+                    <p style={{ fontStyle: 'italic', fontSize: 18, margin: 0, marginBottom: '10px' }}>{item.brand} {item.name}</p>
                     <p style={{ margin: 0 }}>$20 Deposit</p>
                   </div>
                 </div>
             ))}
-        </div>
-        {popupVisible && selectedItemIndex !== null &&  (
-          <div className="popup-background">
-            <div className="popup-content" ref={popupRef}>
-              <div className="popup-left-panel">
-                <img className="popup-image" src={process.env.PUBLIC_URL + '/images/inventory/' + inventoryData?.inventory[selectedItemIndex].image} alt="Sample Synth 2" />
-                <div style={{ width: '500px', height: '20px', backgroundColor: 'black', opacity: '0.5'}}></div>
-                <div style={{ textAlign: 'start', display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                  <p style={{ margin: 0 }}><b>Next Pickup Date:</b> {pickupData?.['next-pickup']}</p>
-                  <p style={{ margin: 0 }}><b>Next Drop-Off Date:</b> {pickupData?.['next-dropoff']}</p>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                    {inventoryData?.inventory[selectedItemIndex].links.map((link, i) => (
-                      <a href={link.link} style={{ textAlign: 'start', margin: 0 }} key={i}>
-                        {link.title}
-                      </a>
-                    ))}
-                  </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                    <button>Reserve</button>
-                  </div>
-                </div>
-              </div>
-              <div className="scrollable-content">
-                <p style={{ fontSize: '30px' }}>
-                  {inventoryData?.inventory[selectedItemIndex].brand}&nbsp;
-                  {inventoryData?.inventory[selectedItemIndex].name}&nbsp;
-                  {inventoryData?.inventory[selectedItemIndex].type}
-                </p>
-                <p>
-                  {inventoryData?.inventory[selectedItemIndex].description}
-                </p>
-              </div>
-              <div><img onClick={handleClosePopup} style={{ cursor: "pointer", height: "30px" }} src={process.env.PUBLIC_URL + '/images/close-icon.png'} alt="Close Icon" /></div>
-            </div>
           </div>
-        )}
+          {popupVisible && selectedItemIndex !== null &&  (
+            <div className="popup-background">
+              <div className="popup-content" ref={popupRef}>
+                <div className="popup-left-panel">
+                  <img className="popup-image" src={process.env.PUBLIC_URL + '/images/inventory/' + inventoryData?.inventory[selectedItemIndex].image} alt="Sample Synth 2" />
+                  <div style={{ width: '500px', height: '15px', backgroundColor: 'black', opacity: '0.5'}}></div>
+                  <div style={{ textAlign: 'start', display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                    <p style={{ margin: 0 }}><b>Next Pickup Date:</b> {pickupData?.['next-pickup']}</p>
+                    <p style={{ margin: 0 }}><b>Next Drop-Off Date:</b> {pickupData?.['next-dropoff']}</p>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                      {inventoryData?.inventory[selectedItemIndex].links.map((link, i) => (
+                        <a href={link.link} style={{ textAlign: 'start', margin: 0 }} key={i}>
+                          {link.title}
+                        </a>
+                      ))}
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                      <button>Reserve</button>
+                    </div>
+                  </div>
+                </div>
+                <div className="scrollable-content">
+                  <p style={{ fontSize: '30px' }}>
+                    {inventoryData?.inventory[selectedItemIndex].brand}&nbsp;
+                    {inventoryData?.inventory[selectedItemIndex].name}&nbsp;
+                    {inventoryData?.inventory[selectedItemIndex].type}
+                  </p>
+                  <p>
+                    {inventoryData?.inventory[selectedItemIndex].description}
+                  </p>
+                </div>
+                <div><img onClick={handleClosePopup} style={{ cursor: "pointer", height: "30px" }} src={process.env.PUBLIC_URL + '/images/close-icon.png'} alt="Close Icon" /></div>
+              </div>
+            </div>
+          )}
+        </div>
     </div>
   );
 };
