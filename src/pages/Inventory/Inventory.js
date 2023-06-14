@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Inventory.css';
 import Header from '../../components/Header/Header';
 import pickupInfo from '../../utils/pickup-info.json';
@@ -9,11 +9,24 @@ const Inventory = () => {
   const [pickupData, setPickupData] = useState(null);
   const [inventoryData, setInventoryData] = useState(null);
   const [selectedItemIndex, setSelectedItemIndex] = useState(null);
-
+  const popupRef = useRef(null);
 
   useEffect(() => {
     setPickupData(pickupInfo);
     setInventoryData(inventoryInfo);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (popupRef.current && !popupRef.current.contains(event.target)) {
+        handleClosePopup();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, []);
   
   const handleSquareClick = (index) => {
@@ -47,7 +60,7 @@ const Inventory = () => {
         </div>
         {popupVisible && selectedItemIndex !== null &&  (
           <div className="popup-background">
-            <div className="popup-content">
+            <div className="popup-content" ref={popupRef}>
               <div className="popup-left-panel">
                 <img className="popup-image" src={process.env.PUBLIC_URL + '/images/inventory/' + inventoryData?.inventory[selectedItemIndex].image} alt="Sample Synth 2" />
                 <div style={{ width: '500px', height: '20px', backgroundColor: 'black', opacity: '0.5'}}></div>
@@ -78,7 +91,7 @@ const Inventory = () => {
                   {inventoryData?.inventory[selectedItemIndex].description}
                 </p>
               </div>
-              <div><img onClick={handleClosePopup} style={{ height: "30px" }} src={process.env.PUBLIC_URL + '/images/close-icon.png'} alt="Close Icon" /></div>
+              <div><img onClick={handleClosePopup} style={{ cursor: "pointer", height: "30px" }} src={process.env.PUBLIC_URL + '/images/close-icon.png'} alt="Close Icon" /></div>
             </div>
           </div>
         )}
