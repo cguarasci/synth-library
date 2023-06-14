@@ -7,12 +7,13 @@
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 50px;
+    min-width: 80px;
     padding: 10px;
     border: 1px solid #ddd;
     z-index: 1;
     color: black;
-    padding-right: 10px;
+    right: 0; /* Added right: 0 to align with the right edge */
+    top: 36px; /* Adjust the top position as needed */
 }
 
 .dropdown:hover .dropdown-content {
@@ -34,4 +35,8 @@
 .black-link {
     color: black;
     text-decoration: none;
+}
+
+.white-link.active {
+    font-weight: bold;
 }

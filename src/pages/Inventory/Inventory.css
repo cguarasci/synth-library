@@ -1,35 +1,116 @@
-
-
 .sine-wave {
-position: relative;
-height: 100px;
-width: 500px;
-background-color: black;
-overflow: hidden;
+    position: relative;
+    height: 100px;
+    width: 500px;
+    background-color: black;
+    overflow: hidden;
 }
 
 .sine-wave:before {
-content: "";
-position: absolute;
-top: 50%;
-left: 0;
-right: 0;
-height: 2px;
-background-color: white;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: white;
 }
 
 .sine-wave:after {
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: linear-gradient(to right, transparent 25%, white 25%, white 75%, transparent 75%);
-background-size: 20px 100%;
-transform: translateY(-50%);
-animation: sine-wave-animation 2s linear infinite;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, transparent 25%, white 25%, white 75%, transparent 75%);
+    background-size: 20px 100%;
+    transform: translateY(-50%);
+    animation: sine-wave-animation 2s linear infinite;
 }
+
+.panel-array {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 350px;
+    border-radius: 10%;
+    margin: 30px;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.more-info-button {
+    align-self: flex-end;
+}
+
+.panel-image {
+    align-self: center;
+    padding: 30px 0;
+    max-width: 250px;
+    max-height: 200px;
+    width: fit-content;
+}
+
+.item-info {
+    align-self: flex-start;
+}
+
+.popup-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    display: flex;
+    justify-content: space-between;
+    background-color: #EBEBEB;
+    padding: 30px;
+    border-radius: 10px;
+    width: 1050px;
+    height: 500px;
+    text-align: center;
+}
+
+.popup-image {
+    align-self: center;
+    padding: 30px 0;
+    max-height: 250px;
+    width: fit-content;
+}
+
+.popup-left-panel {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.scrollable-content {
+    overflow: auto;
+    background-color: #EBEBEB;
+    padding: 0 10px;
+    border: none;
+  }
+  
 
 /* @keyframes sine-wave-animation {
 0% {

@@ -4,7 +4,7 @@ import Header from '../../components/Header/Header';
 const Home = () => {
   return (
     <div>
-      <Header />
+      <Header activePage="Home" />
       <main>
         <img style={{ width: '100%', top: 0, left: 0 }} src={process.env.PUBLIC_URL + '/images/homepagebackground.jpg'} alt="Homepage Background" />
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor sagittis dapibus. In eget ipsum orci. Ut ut metus odio. Suspendisse potenti. Nulla volutpat lectus ut ex sollicitudin, ac egestas mauris feugiat. Quisque efficitur eu arcu eget congue. Mauris volutpat elit non sollicitudin aliquet. Pellentesque ac sem eget enim lacinia sollicitudin id id turpis. Nulla elementum est at dolor pretium ullamcorper.</p>

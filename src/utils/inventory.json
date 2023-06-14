@@ -1,0 +1,187 @@
+{
+    "inventory": [
+        {
+            "in-stock": 1,
+            "brand": "Moog",
+            "name": "MS-10",
+            "type": "Modular Analog Synthesizer",
+            "barcode": "111",
+            "image": "sample-synth-1.png",
+            "links": [
+                {
+                    "title": "Manual",
+                    "link": "http://www.testing.com"
+                },
+                {
+                    "title": "Demo",
+                    "link": "http://www.testing.com"
+                }
+            ],
+            "description": "MoogLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac rutrum risus, in molestie nulla. Curabitur venenatis, velit et posuere ullamcorper, turpis lectus fringilla magna, luctus varius justo augue eget lectus. Sed quis augue eu diam interdum consequat vel eget urna. Donec placerat, turpis a efficitur accumsan, augue dui ullamcorper nisi, quis finibus ex nunc euismod neque. Proin ac elit sed mauris rutrum elementum in aliquet mauris. Ut rhoncus mauris dictum massa interdum pellentesque. Sed tempus turpis ut orci finibus rutrum. Aliquam tincidunt rhoncus erat in consectetur. Morbi sed mauris pretium, imperdiet elit vel, aliquam dui."
+        },
+        {
+            "in-stock": 1,
+            "brand": "Korg",
+            "name": "MS-20",
+            "type": "Modular Analog Synthesizer",
+            "barcode": "222",
+            "image": "sample-synth-2.png",
+            "links": [
+                {
+                    "title": "Manual",
+                    "link": "http://www.testing.com"
+                },
+                {
+                    "title": "Manual",
+                    "link": "http://www.testing.com"
+                },
+                {
+                    "title": "Demo",
+                    "link": "http://www.testing.com"
+                }
+            ],
+            "description": "KorgLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac rutrum risus, in molestie nulla. Curabitur venenatis, velit et posuere ullamcorper, turpis lectus fringilla magna, luctus varius justo augue eget lectus. Sed quis augue eu diam interdum consequat vel eget urna. Donec placerat, turpis a efficitur accumsan, augue dui ullamcorper nisi, quis finibus ex nunc euismod neque. Proin ac elit sed mauris rutrum elementum in aliquet mauris. Ut rhoncus mauris dictum massa interdum pellentesque. Sed tempus turpis ut orci finibus rutrum. Aliquam tincidunt rhoncus erat in consectetur. Morbi sed mauris pretium, imperdiet elit vel, aliquam dui."
+        },
+        {
+            "in-stock": 1,
+            "brand": "Boolean",
+            "name": "MS-30",
+            "type": "Modular Analog Synthesizer",
+            "barcode": "333",
+            "image": "sample-synth-3.png",
+            "links": [
+                {
+                    "title": "Manual",
+                    "link": "http://www.testing.com"
+                },
+                {
+                    "title": "Manual",
+                    "link": "http://www.testing.com"
+                },
+                {
+                    "title": "Manual",
+                    "link": "http://www.testing.com"
+                },
+                {
+                    "title": "Demo",
+                    "link": "http://www.testing.com"
+                }
+            ],
+            "description": "BooleanLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac rutrum risus, in molestie nulla. Curabitur venenatis, velit et posuere ullamcorper, turpis lectus fringilla magna, luctus varius justo augue eget lectus. Sed quis augue eu diam interdum consequat vel eget urna. Donec placerat, turpis a efficitur accumsan, augue dui ullamcorper nisi, quis finibus ex nunc euismod neque. Proin ac elit sed mauris rutrum elementum in aliquet mauris. Ut rhoncus mauris dictum massa interdum pellentesque. Sed tempus turpis ut orci finibus rutrum. Aliquam tincidunt rhoncus erat in consectetur. Morbi sed mauris pretium, imperdiet elit vel, aliquam dui."
+        },
+        {
+            "in-stock": 1,
+            "brand": "Moog",
+            "name": "MS-10",
+            "type": "Modular Analog Synthesizer",
+            "barcode": "111",
+            "image": "sample-synth-1.png",
+            "links": [
+                {
+                    "title": "Manual",
+                    "link": "http://www.testing.com"
+                },
+                {
+                    "title": "Demo",
+                    "link": "http://www.testing.com"
+                }
+            ],
+            "description": "MoogLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac rutrum risus, in molestie nulla. Curabitur venenatis, velit et posuere ullamcorper, turpis lectus fringilla magna, luctus varius justo augue eget lectus. Sed quis augue eu diam interdum consequat vel eget urna. Donec placerat, turpis a efficitur accumsan, augue dui ullamcorper nisi, quis finibus ex nunc euismod neque. Proin ac elit sed mauris rutrum elementum in aliquet mauris. Ut rhoncus mauris dictum massa interdum pellentesque. Sed tempus turpis ut orci finibus rutrum. Aliquam tincidunt rhoncus erat in consectetur. Morbi sed mauris pretium, imperdiet elit vel, aliquam dui."
+        },
+        {
+            "in-stock": 1,
+            "brand": "Korg",
+            "name": "MS-20",
+            "type": "Modular Analog Synthesizer",
+            "barcode": "222",
+            "image": "sample-synth-2.png",
+            "links": [
+                {
+                    "title": "Manual",
+                    "link": "http://www.testing.com"
+                },
+                {
+                    "title": "Demo",
+                    "link": "http://www.testing.com"
+                }
+            ],
+            "description": "KorgLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac rutrum risus, in molestie nulla. Curabitur venenatis, velit et posuere ullamcorper, turpis lectus fringilla magna, luctus varius justo augue eget lectus. Sed quis augue eu diam interdum consequat vel eget urna. Donec placerat, turpis a efficitur accumsan, augue dui ullamcorper nisi, quis finibus ex nunc euismod neque. Proin ac elit sed mauris rutrum elementum in aliquet mauris. Ut rhoncus mauris dictum massa interdum pellentesque. Sed tempus turpis ut orci finibus rutrum. Aliquam tincidunt rhoncus erat in consectetur. Morbi sed mauris pretium, imperdiet elit vel, aliquam dui."
+        },
+        {
+            "in-stock": 1,
+            "brand": "Boolean",
+            "name": "MS-30",
+            "type": "Modular Analog Synthesizer",
+            "barcode": "333",
+            "image": "sample-synth-3.png",
+            "links": [
+                {
+                    "title": "Manual",
+                    "link": "http://www.testing.com"
+                },
+                {
+                    "title": "Demo",
+                    "link": "http://www.testing.com"
+                }
+            ],
+            "description": "BooleanLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac rutrum risus, in molestie nulla. Curabitur venenatis, velit et posuere ullamcorper, turpis lectus fringilla magna, luctus varius justo augue eget lectus. Sed quis augue eu diam interdum consequat vel eget urna. Donec placerat, turpis a efficitur accumsan, augue dui ullamcorper nisi, quis finibus ex nunc euismod neque. Proin ac elit sed mauris rutrum elementum in aliquet mauris. Ut rhoncus mauris dictum massa interdum pellentesque. Sed tempus turpis ut orci finibus rutrum. Aliquam tincidunt rhoncus erat in consectetur. Morbi sed mauris pretium, imperdiet elit vel, aliquam dui."
+        },
+        {
+            "in-stock": 1,
+            "brand": "Moog",
+            "name": "MS-10",
+            "type": "Modular Analog Synthesizer",
+            "barcode": "111",
+            "image": "sample-synth-1.png",
+            "links": [
+                {
+                    "title": "Manual",
+                    "link": "http://www.testing.com"
+                },
+                {
+                    "title": "Demo",
+                    "link": "http://www.testing.com"
+                }
+            ],
+            "description": "MoogLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac rutrum risus, in molestie nulla. Curabitur venenatis, velit et posuere ullamcorper, turpis lectus fringilla magna, luctus varius justo augue eget lectus. Sed quis augue eu diam interdum consequat vel eget urna. Donec placerat, turpis a efficitur accumsan, augue dui ullamcorper nisi, quis finibus ex nunc euismod neque. Proin ac elit sed mauris rutrum elementum in aliquet mauris. Ut rhoncus mauris dictum massa interdum pellentesque. Sed tempus turpis ut orci finibus rutrum. Aliquam tincidunt rhoncus erat in consectetur. Morbi sed mauris pretium, imperdiet elit vel, aliquam dui."
+        },
+        {
+            "in-stock": 1,
+            "brand": "Korg",
+            "name": "MS-20",
+            "type": "Modular Analog Synthesizer",
+            "barcode": "222",
+            "image": "sample-synth-2.png",
+            "links": [
+                {
+                    "title": "Manual",
+                    "link": "http://www.testing.com"
+                },
+                {
+                    "title": "Demo",
+                    "link": "http://www.testing.com"
+                }
+            ],
+            "description": "KorgLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac rutrum risus, in molestie nulla. Curabitur venenatis, velit et posuere ullamcorper, turpis lectus fringilla magna, luctus varius justo augue eget lectus. Sed quis augue eu diam interdum consequat vel eget urna. Donec placerat, turpis a efficitur accumsan, augue dui ullamcorper nisi, quis finibus ex nunc euismod neque. Proin ac elit sed mauris rutrum elementum in aliquet mauris. Ut rhoncus mauris dictum massa interdum pellentesque. Sed tempus turpis ut orci finibus rutrum. Aliquam tincidunt rhoncus erat in consectetur. Morbi sed mauris pretium, imperdiet elit vel, aliquam dui."
+        },
+        {
+            "in-stock": 1,
+            "brand": "Boolean",
+            "name": "MS-30",
+            "type": "Modular Analog Synthesizer",
+            "barcode": "333",
+            "image": "sample-synth-3.png",
+            "links": [
+                {
+                    "title": "Manual",
+                    "link": "http://www.testing.com"
+                },
+                {
+                    "title": "Demo",
+                    "link": "http://www.testing.com"
+                }
+            ],
+            "description": "BooleanLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac rutrum risus, in molestie nulla. Curabitur venenatis, velit et posuere ullamcorper, turpis lectus fringilla magna, luctus varius justo augue eget lectus. Sed quis augue eu diam interdum consequat vel eget urna. Donec placerat, turpis a efficitur accumsan, augue dui ullamcorper nisi, quis finibus ex nunc euismod neque. Proin ac elit sed mauris rutrum elementum in aliquet mauris. Ut rhoncus mauris dictum massa interdum pellentesque. Sed tempus turpis ut orci finibus rutrum. Aliquam tincidunt rhoncus erat in consectetur. Morbi sed mauris pretium, imperdiet elit vel, aliquam dui."
+        }
+    ]
+}
