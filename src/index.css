@@ -1,5 +1,6 @@
 :root {
-  --body-background-color: white;
+  --body-background-color: black;
+  --body-text-color: white;
 }
 
 body {
@@ -9,7 +10,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--body-background-color); /* Use the CSS variable */
+  background-color: var(--body-background-color);
+  color: var(--body-text-color);
+}
+
+h1 {
+  font-family: 'Libre Barcode 39 Text';
+  font-size: 48px;
 }
 
 code {
