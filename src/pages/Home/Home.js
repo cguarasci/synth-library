@@ -1,36 +1,31 @@
 import './Home.css';
 import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 
 const Home = () => {
   return (
     <div>
       <Header activePage="Home" />
       <main>
-        <img style={{ width: '100%', top: 0, left: 0 }} src={process.env.PUBLIC_URL + '/images/homepagebackground.jpg'} alt="Homepage Background" />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor sagittis dapibus. In eget ipsum orci. Ut ut metus odio. Suspendisse potenti. Nulla volutpat lectus ut ex sollicitudin, ac egestas mauris feugiat. Quisque efficitur eu arcu eget congue. Mauris volutpat elit non sollicitudin aliquet. Pellentesque ac sem eget enim lacinia sollicitudin id id turpis. Nulla elementum est at dolor pretium ullamcorper.</p>
-        <p>Nunc accumsan ipsum elit, id hendrerit sem vestibulum et. Praesent eu ligula vitae velit scelerisque malesuada. Vivamus rhoncus vulputate arcu ut suscipit. Aliquam erat volutpat. Duis varius dui at nibh eleifend, ac ultrices nisl tristique. Vivamus tempor iaculis cursus. Donec gravida fringilla odio. In hac habitasse platea dictumst.</p>
-        <p>Phasellus mattis viverra felis, sed vulputate felis efficitur at. Aliquam eu facilisis lorem, sed aliquam velit. Sed ut sapien sed urna consectetur dignissim. Donec at lobortis ligula. Nullam varius velit vitae vestibulum vestibulum. Curabitur quis cursus ex, in luctus felis. Sed interdum fringilla dui sed tempor.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor sagittis dapibus. In eget ipsum orci. Ut ut metus odio. Suspendisse potenti. Nulla volutpat lectus ut ex sollicitudin, ac egestas mauris feugiat. Quisque efficitur eu arcu eget congue. Mauris volutpat elit non sollicitudin aliquet. Pellentesque ac sem eget enim lacinia sollicitudin id id turpis. Nulla elementum est at dolor pretium ullamcorper.</p>
-        <p>Nunc accumsan ipsum elit, id hendrerit sem vestibulum et. Praesent eu ligula vitae velit scelerisque malesuada. Vivamus rhoncus vulputate arcu ut suscipit. Aliquam erat volutpat. Duis varius dui at nibh eleifend, ac ultrices nisl tristique. Vivamus tempor iaculis cursus. Donec gravida fringilla odio. In hac habitasse platea dictumst.</p>
-        <p>Phasellus mattis viverra felis, sed vulputate felis efficitur at. Aliquam eu facilisis lorem, sed aliquam velit. Sed ut sapien sed urna consectetur dignissim. Donec at lobortis ligula. Nullam varius velit vitae vestibulum vestibulum. Curabitur quis cursus ex, in luctus felis. Sed interdum fringilla dui sed tempor.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor sagittis dapibus. In eget ipsum orci. Ut ut metus odio. Suspendisse potenti. Nulla volutpat lectus ut ex sollicitudin, ac egestas mauris feugiat. Quisque efficitur eu arcu eget congue. Mauris volutpat elit non sollicitudin aliquet. Pellentesque ac sem eget enim lacinia sollicitudin id id turpis. Nulla elementum est at dolor pretium ullamcorper.</p>
-        <p>Nunc accumsan ipsum elit, id hendrerit sem vestibulum et. Praesent eu ligula vitae velit scelerisque malesuada. Vivamus rhoncus vulputate arcu ut suscipit. Aliquam erat volutpat. Duis varius dui at nibh eleifend, ac ultrices nisl tristique. Vivamus tempor iaculis cursus. Donec gravida fringilla odio. In hac habitasse platea dictumst.</p>
-        <p>Phasellus mattis viverra felis, sed vulputate felis efficitur at. Aliquam eu facilisis lorem, sed aliquam velit. Sed ut sapien sed urna consectetur dignissim. Donec at lobortis ligula. Nullam varius velit vitae vestibulum vestibulum. Curabitur quis cursus ex, in luctus felis. Sed interdum fringilla dui sed tempor.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor sagittis dapibus. In eget ipsum orci. Ut ut metus odio. Suspendisse potenti. Nulla volutpat lectus ut ex sollicitudin, ac egestas mauris feugiat. Quisque efficitur eu arcu eget congue. Mauris volutpat elit non sollicitudin aliquet. Pellentesque ac sem eget enim lacinia sollicitudin id id turpis. Nulla elementum est at dolor pretium ullamcorper.</p>
-        <p>Nunc accumsan ipsum elit, id hendrerit sem vestibulum et. Praesent eu ligula vitae velit scelerisque malesuada. Vivamus rhoncus vulputate arcu ut suscipit. Aliquam erat volutpat. Duis varius dui at nibh eleifend, ac ultrices nisl tristique. Vivamus tempor iaculis cursus. Donec gravida fringilla odio. In hac habitasse platea dictumst.</p>
-        <p>Phasellus mattis viverra felis, sed vulputate felis efficitur at. Aliquam eu facilisis lorem, sed aliquam velit. Sed ut sapien sed urna consectetur dignissim. Donec at lobortis ligula. Nullam varius velit vitae vestibulum vestibulum. Curabitur quis cursus ex, in luctus felis. Sed interdum fringilla dui sed tempor.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor sagittis dapibus. In eget ipsum orci. Ut ut metus odio. Suspendisse potenti. Nulla volutpat lectus ut ex sollicitudin, ac egestas mauris feugiat. Quisque efficitur eu arcu eget congue. Mauris volutpat elit non sollicitudin aliquet. Pellentesque ac sem eget enim lacinia sollicitudin id id turpis. Nulla elementum est at dolor pretium ullamcorper.</p>
-        <p>Nunc accumsan ipsum elit, id hendrerit sem vestibulum et. Praesent eu ligula vitae velit scelerisque malesuada. Vivamus rhoncus vulputate arcu ut suscipit. Aliquam erat volutpat. Duis varius dui at nibh eleifend, ac ultrices nisl tristique. Vivamus tempor iaculis cursus. Donec gravida fringilla odio. In hac habitasse platea dictumst.</p>
-        <p>Phasellus mattis viverra felis, sed vulputate felis efficitur at. Aliquam eu facilisis lorem, sed aliquam velit. Sed ut sapien sed urna consectetur dignissim. Donec at lobortis ligula. Nullam varius velit vitae vestibulum vestibulum. Curabitur quis cursus ex, in luctus felis. Sed interdum fringilla dui sed tempor.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor sagittis dapibus. In eget ipsum orci. Ut ut metus odio. Suspendisse potenti. Nulla volutpat lectus ut ex sollicitudin, ac egestas mauris feugiat. Quisque efficitur eu arcu eget congue. Mauris volutpat elit non sollicitudin aliquet. Pellentesque ac sem eget enim lacinia sollicitudin id id turpis. Nulla elementum est at dolor pretium ullamcorper.</p>
-        <p>Nunc accumsan ipsum elit, id hendrerit sem vestibulum et. Praesent eu ligula vitae velit scelerisque malesuada. Vivamus rhoncus vulputate arcu ut suscipit. Aliquam erat volutpat. Duis varius dui at nibh eleifend, ac ultrices nisl tristique. Vivamus tempor iaculis cursus. Donec gravida fringilla odio. In hac habitasse platea dictumst.</p>
-        <p>Phasellus mattis viverra felis, sed vulputate felis efficitur at. Aliquam eu facilisis lorem, sed aliquam velit. Sed ut sapien sed urna consectetur dignissim. Donec at lobortis ligula. Nullam varius velit vitae vestibulum vestibulum. Curabitur quis cursus ex, in luctus felis. Sed interdum fringilla dui sed tempor.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor sagittis dapibus. In eget ipsum orci. Ut ut metus odio. Suspendisse potenti. Nulla volutpat lectus ut ex sollicitudin, ac egestas mauris feugiat. Quisque efficitur eu arcu eget congue. Mauris volutpat elit non sollicitudin aliquet. Pellentesque ac sem eget enim lacinia sollicitudin id id turpis. Nulla elementum est at dolor pretium ullamcorper.</p>
-        <p>Nunc accumsan ipsum elit, id hendrerit sem vestibulum et. Praesent eu ligula vitae velit scelerisque malesuada. Vivamus rhoncus vulputate arcu ut suscipit. Aliquam erat volutpat. Duis varius dui at nibh eleifend, ac ultrices nisl tristique. Vivamus tempor iaculis cursus. Donec gravida fringilla odio. In hac habitasse platea dictumst.</p>
-        <p>Phasellus mattis viverra felis, sed vulputate felis efficitur at. Aliquam eu facilisis lorem, sed aliquam velit. Sed ut sapien sed urna consectetur dignissim. Donec at lobortis ligula. Nullam varius velit vitae vestibulum vestibulum. Curabitur quis cursus ex, in luctus felis. Sed interdum fringilla dui sed tempor.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor sagittis dapibus. In eget ipsum orci. Ut ut metus odio. Suspendisse potenti. Nulla volutpat lectus ut ex sollicitudin, ac egestas mauris feugiat. Quisque efficitur eu arcu eget congue. Mauris volutpat elit non sollicitudin aliquet. Pellentesque ac sem eget enim lacinia sollicitudin id id turpis. Nulla elementum est at dolor pretium ullamcorper.</p>
-        <p>Nunc accumsan ipsum elit, id hendrerit sem vestibulum et. Praesent eu ligula vitae velit scelerisque malesuada. Vivamus rhoncus vulputate arcu ut suscipit. Aliquam erat volutpat. Duis varius dui at nibh eleifend, ac ultrices nisl tristique. Vivamus tempor iaculis cursus. Donec gravida fringilla odio. In hac habitasse platea dictumst.</p>
-        <p>Phasellus mattis viverra felis, sed vulputate felis efficitur at. Aliquam eu facilisis lorem, sed aliquam velit. Sed ut sapien sed urna consectetur dignissim. Donec at lobortis ligula. Nullam varius velit vitae vestibulum vestibulum. Curabitur quis cursus ex, in luctus felis. Sed interdum fringilla dui sed tempor.</p>
+        <img class="full-screen-image" src={process.env.PUBLIC_URL + '/images/homepagebackground.jpg'} alt="Homepage Background" />
+        <div class="section-folder">
+          <div class="section sec-one" id="section1">
+          </div>
+          <div class="section sec-two" id="section2">
+            <div class="sec-two-text">
+              <p class="sec-two-header">What Is Synth Library Orlando?</p>
+              <p class="sec-two-description">Description</p>
+            </div>
+          </div>
+          <div class="section sec-three" id="section3">
+            Contact Us
+          </div>
+          {/* <div class="section sec-four" id="section4">
+            Content 4
+          </div> */}
+        </div>
+        <script src="script.js"></script>
+        <Footer />
       </main>
     </div>
   );

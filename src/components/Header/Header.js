@@ -8,9 +8,11 @@ const Header = ({ activePage }) => {
       <div style={{ display: 'flex', gap: '20px', alignItems: 'center', marginRight: '50px', position: 'relative' }}>
         <a href="/about" className={`white-link ${activePage === 'About' ? 'active' : ''}`}>About</a>
         <p>|</p>
+        <a href="/apply" className={`white-link ${activePage === 'Apply' ? 'active' : ''}`}>Apply</a>
+        <p>|</p>
         <a href="/library" className={`white-link ${activePage === 'Library' ? 'active' : ''}`}>Library</a>
         <p>|</p>
-        <a href="/calendar" className={`white-link ${activePage === 'Calendar' ? 'active' : ''}`}>Calendar</a>
+        <a href="/donate" className={`white-link ${activePage === 'Donate' ? 'active' : ''}`}>Donate</a>
         <div className="dropdown">
           <img style={{ width: '32px', top: 0, left: 0 }} src={process.env.PUBLIC_URL + '/images/empty-avatar.png'} alt="Profile Avatar" />
           <div className="dropdown-content">
