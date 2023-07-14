@@ -1,12 +1,13 @@
 {
     "inventory": [
         {
-            "in-stock": 1,
-            "brand": "Moog",
-            "name": "MS-10",
-            "type": "Modular Analog Synthesizer",
+            "inStock": 0,
+            "brand": "Arturia",
+            "name": "BeatStep Pro",
+            "type": "Controller & Sequencer",
             "barcode": "111",
-            "image": "sample-synth-1.png",
+            "image": "beatsteppro.png",
+            "deposit": "5.00",
             "links": [
                 {
                     "title": "Manual",
@@ -17,15 +18,16 @@
                     "link": "http://www.testing.com"
                 }
             ],
-            "description": "MoogLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac rutrum risus, in molestie nulla. Curabitur venenatis, velit et posuere ullamcorper, turpis lectus fringilla magna, luctus varius justo augue eget lectus. Sed quis augue eu diam interdum consequat vel eget urna. Donec placerat, turpis a efficitur accumsan, augue dui ullamcorper nisi, quis finibus ex nunc euismod neque. Proin ac elit sed mauris rutrum elementum in aliquet mauris. Ut rhoncus mauris dictum massa interdum pellentesque. Sed tempus turpis ut orci finibus rutrum. Aliquam tincidunt rhoncus erat in consectetur. Morbi sed mauris pretium, imperdiet elit vel, aliquam dui."
+            "description": "For anyone who prefers the hands-on experience of hardware sequencing and works with a wide variety of electronic music gear, the Arturia BeatStep Pro is a dream come true. Designed to play well with MIDI, USB, CV/Gate, and even DIN Sync platforms, Arturia BeatStep Pro offers a combination of two independent sequencers, each with 64 steps per sequence. There's also a 16-track drum sequencer onboard with real-time recording and old-school step sequencing available. Now add on performance effects, a looper, a randomizer, and amazing tactile controls, and you can start to see the power of the Arturia BeatStep Pro."
         },
         {
-            "in-stock": 1,
-            "brand": "Korg",
-            "name": "MS-20",
-            "type": "Modular Analog Synthesizer",
+            "inStock": 1,
+            "brand": "Akai Professional",
+            "name": "MPK249",
+            "type": "49-key Keyboard Controller",
             "barcode": "222",
-            "image": "sample-synth-2.png",
+            "image": "MPK249.png",
+            "deposit": "5.00",
             "links": [
                 {
                     "title": "Manual",
@@ -40,15 +42,16 @@
                     "link": "http://www.testing.com"
                 }
             ],
-            "description": "KorgLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac rutrum risus, in molestie nulla. Curabitur venenatis, velit et posuere ullamcorper, turpis lectus fringilla magna, luctus varius justo augue eget lectus. Sed quis augue eu diam interdum consequat vel eget urna. Donec placerat, turpis a efficitur accumsan, augue dui ullamcorper nisi, quis finibus ex nunc euismod neque. Proin ac elit sed mauris rutrum elementum in aliquet mauris. Ut rhoncus mauris dictum massa interdum pellentesque. Sed tempus turpis ut orci finibus rutrum. Aliquam tincidunt rhoncus erat in consectetur. Morbi sed mauris pretium, imperdiet elit vel, aliquam dui."
+            "description": "Akai Professional's MPK controller keyboards have become standard equipment in many professional MIDI rigs. The latest MPK249 rocks improvements in every major area, from its new RGB-illuminated MPC-style pads to the superb action of its aftertouch-enabled 49-note keybed. The MPK249 gives you boatloads of workflow-enhancing features such as MPC Note Repeat, MPC Swing, and an arpeggiator for complex rhythmic and melodic manipulation. With its assignable faders, buttons, and encoders (eight each), 16 performance pads, transport controls, LCD screen, and USB/iOS modes, the MPK249 gives you absolute control over your software."
         },
         {
-            "in-stock": 1,
-            "brand": "Boolean",
-            "name": "MS-30",
-            "type": "Microphone",
+            "inStock": 1,
+            "brand": "Behringer",
+            "name": "TD-3",
+            "type": "Analog Bass Synthesizer",
             "barcode": "333",
-            "image": "sample-synth-3.png",
+            "image": "td3.png",
+            "deposit": "10.00",
             "links": [
                 {
                     "title": "Manual",
@@ -70,12 +73,13 @@
             "description": "BooleanLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac rutrum risus, in molestie nulla. Curabitur venenatis, velit et posuere ullamcorper, turpis lectus fringilla magna, luctus varius justo augue eget lectus. Sed quis augue eu diam interdum consequat vel eget urna. Donec placerat, turpis a efficitur accumsan, augue dui ullamcorper nisi, quis finibus ex nunc euismod neque. Proin ac elit sed mauris rutrum elementum in aliquet mauris. Ut rhoncus mauris dictum massa interdum pellentesque. Sed tempus turpis ut orci finibus rutrum. Aliquam tincidunt rhoncus erat in consectetur. Morbi sed mauris pretium, imperdiet elit vel, aliquam dui."
         },
         {
-            "in-stock": 1,
+            "inStock": 0,
             "brand": "Moog",
             "name": "MS-10",
             "type": "Modular Analog Synthesizer",
             "barcode": "111",
-            "image": "sample-synth-1.png",
+            "image": "td3.png",
+            "deposit": "20.00",
             "links": [
                 {
                     "title": "Manual",
@@ -89,12 +93,13 @@
             "description": "MoogLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac rutrum risus, in molestie nulla. Curabitur venenatis, velit et posuere ullamcorper, turpis lectus fringilla magna, luctus varius justo augue eget lectus. Sed quis augue eu diam interdum consequat vel eget urna. Donec placerat, turpis a efficitur accumsan, augue dui ullamcorper nisi, quis finibus ex nunc euismod neque. Proin ac elit sed mauris rutrum elementum in aliquet mauris. Ut rhoncus mauris dictum massa interdum pellentesque. Sed tempus turpis ut orci finibus rutrum. Aliquam tincidunt rhoncus erat in consectetur. Morbi sed mauris pretium, imperdiet elit vel, aliquam dui."
         },
         {
-            "in-stock": 1,
+            "inStock": 1,
             "brand": "Korg",
             "name": "MS-20",
             "type": "Modular Analog Synthesizer",
             "barcode": "222",
             "image": "sample-synth-2.png",
+            "deposit": "20.00",
             "links": [
                 {
                     "title": "Manual",
@@ -108,12 +113,13 @@
             "description": "KorgLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac rutrum risus, in molestie nulla. Curabitur venenatis, velit et posuere ullamcorper, turpis lectus fringilla magna, luctus varius justo augue eget lectus. Sed quis augue eu diam interdum consequat vel eget urna. Donec placerat, turpis a efficitur accumsan, augue dui ullamcorper nisi, quis finibus ex nunc euismod neque. Proin ac elit sed mauris rutrum elementum in aliquet mauris. Ut rhoncus mauris dictum massa interdum pellentesque. Sed tempus turpis ut orci finibus rutrum. Aliquam tincidunt rhoncus erat in consectetur. Morbi sed mauris pretium, imperdiet elit vel, aliquam dui."
         },
         {
-            "in-stock": 1,
+            "inStock": 1,
             "brand": "Boolean",
             "name": "MS-30",
             "type": "Modular Analog Synthesizer",
             "barcode": "333",
             "image": "sample-synth-3.png",
+            "deposit": "20.00",
             "links": [
                 {
                     "title": "Manual",
@@ -127,12 +133,13 @@
             "description": "BooleanLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac rutrum risus, in molestie nulla. Curabitur venenatis, velit et posuere ullamcorper, turpis lectus fringilla magna, luctus varius justo augue eget lectus. Sed quis augue eu diam interdum consequat vel eget urna. Donec placerat, turpis a efficitur accumsan, augue dui ullamcorper nisi, quis finibus ex nunc euismod neque. Proin ac elit sed mauris rutrum elementum in aliquet mauris. Ut rhoncus mauris dictum massa interdum pellentesque. Sed tempus turpis ut orci finibus rutrum. Aliquam tincidunt rhoncus erat in consectetur. Morbi sed mauris pretium, imperdiet elit vel, aliquam dui."
         },
         {
-            "in-stock": 1,
+            "inStock": 1,
             "brand": "Moog",
             "name": "MS-10",
             "type": "Modular Analog Synthesizer",
             "barcode": "111",
-            "image": "sample-synth-1.png",
+            "image": "td3.png",
+            "deposit": "20.00",
             "links": [
                 {
                     "title": "Manual",
@@ -146,12 +153,13 @@
             "description": "MoogLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac rutrum risus, in molestie nulla. Curabitur venenatis, velit et posuere ullamcorper, turpis lectus fringilla magna, luctus varius justo augue eget lectus. Sed quis augue eu diam interdum consequat vel eget urna. Donec placerat, turpis a efficitur accumsan, augue dui ullamcorper nisi, quis finibus ex nunc euismod neque. Proin ac elit sed mauris rutrum elementum in aliquet mauris. Ut rhoncus mauris dictum massa interdum pellentesque. Sed tempus turpis ut orci finibus rutrum. Aliquam tincidunt rhoncus erat in consectetur. Morbi sed mauris pretium, imperdiet elit vel, aliquam dui."
         },
         {
-            "in-stock": 1,
+            "inStock": 1,
             "brand": "Korg",
             "name": "MS-20",
             "type": "Modular Analog Synthesizer",
             "barcode": "222",
             "image": "sample-synth-2.png",
+            "deposit": "20.00",
             "links": [
                 {
                     "title": "Manual",
@@ -165,12 +173,13 @@
             "description": "KorgLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac rutrum risus, in molestie nulla. Curabitur venenatis, velit et posuere ullamcorper, turpis lectus fringilla magna, luctus varius justo augue eget lectus. Sed quis augue eu diam interdum consequat vel eget urna. Donec placerat, turpis a efficitur accumsan, augue dui ullamcorper nisi, quis finibus ex nunc euismod neque. Proin ac elit sed mauris rutrum elementum in aliquet mauris. Ut rhoncus mauris dictum massa interdum pellentesque. Sed tempus turpis ut orci finibus rutrum. Aliquam tincidunt rhoncus erat in consectetur. Morbi sed mauris pretium, imperdiet elit vel, aliquam dui."
         },
         {
-            "in-stock": 1,
+            "inStock": 1,
             "brand": "Boolean",
             "name": "MS-30",
             "type": "Modular Analog Synthesizer",
             "barcode": "333",
             "image": "sample-synth-3.png",
+            "deposit": "20.00",
             "links": [
                 {
                     "title": "Manual",

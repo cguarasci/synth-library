@@ -138,19 +138,19 @@ const Inventory = () => {
                 <p style={{ margin: 0 }}><b>Next Drop-Off Date:</b> {pickupData?.['next-dropoff']}</p>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'flex-start' }}>
                   {inventoryData?.inventory[selectedItemIndex].links.map((link, i) => (
-                    <a href={link.link} style={{ textAlign: 'start', margin: 0 }} key={i}>
+                    <a href={link.link} style={{ textDecoration: 'none', color: '#007bff' }} key={i}>
                       {link.title}
                     </a>
                   ))}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                   {!reserveInfoVisible &&  (
-                    <button onClick={() => handleReserveClick()}>Reserve</button>
+                    <button className='reserve-button' onClick={() => handleReserveClick()}>Reserve</button>
                   )}
                   {reserveInfoVisible &&  (
-                    <button onClick={() => handleMoreInfoClick()}>More Info</button>
+                    <button className='reserve-more-info-button' onClick={() => handleMoreInfoClick()}>More Info</button>
                   )}
                 </div>
               </div>
@@ -177,14 +177,21 @@ const Inventory = () => {
                     {inventoryData?.inventory[selectedItemIndex].type}
                   </p>
                   <div style={{display: 'flex', flexDirection: 'column'}}>
-                    <p>There is a refundable deposit amount of $20.00.</p>
-                    <form style={{display: 'flex', flexDirection: 'column', gap: '20px'}} action="">
-                      <label for="donations">Would you like to donate your deposit?</label>
-                      <select id="donations" name="donations">
-                        <option value="no">No, I would like to receive my $20 deposit back.</option>
-                        <option value="yes">Yes, donate my $20 deposit.</option>
-                      </select>
-                      <input type="submit" value="Add to Cart" />
+                    <p>There is a refundable deposit amount of ${inventoryData?.inventory[selectedItemIndex].deposit}.</p>
+                    <form style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }} action="">
+                      <label htmlFor="donations">Would you like to donate your deposit?</label>
+                      <div className="dropdown">
+                        <select className="dropdown-select" id="donations" name="donations">
+                          <option value="no">No, I would like to receive my ${inventoryData?.inventory[selectedItemIndex].deposit} deposit back.</option>
+                          <option value="yes">Yes, donate my ${inventoryData?.inventory[selectedItemIndex].deposit} deposit.</option>
+                        </select>
+                        <ul className="dropdown-options">
+                          <li className="dropdown-option">No, I would like to receive my $20 deposit back.</li>
+                          <li className="dropdown-option">Yes, donate my $20 deposit.</li>
+                        </ul>
+                      </div>
+                      <input type="submit" value="Add to Cart" className="add-to-cart-button"
+                      />
                     </form>
                     <div>
                       <h4>Where does my donation go?</h4>

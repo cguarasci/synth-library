@@ -20,6 +20,10 @@
     background-color: rgba(0, 0, 0, 0.15);
 }
 
+.panel:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
 .more-info-button {
     align-self: flex-end;
 }
@@ -64,7 +68,7 @@
     align-self: center;
     padding: 30px 0;
     max-height: 250px;
-    width: fit-content;
+    max-width: 500px;
 }
 
 .popup-left-panel {
@@ -74,9 +78,134 @@
     padding: 10px;
 }
 
+.reserve-button {
+    display: inline-block;
+    align-self: flex-end;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #1b910e;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.reserve-button:hover {
+    background-color: #115d09;
+}
+
+.reserve-button:active {
+    background-color: #115d09;
+}
+
+.reserve-more-info-button {
+    display: inline-block;
+    align-self: flex-end;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #00000066;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.reserve-more-info-button:hover {
+    background-color: #00000088;
+}
+
+.reserve-more-info-button:active {
+    background-color: #00000088;
+}
+
 .scrollable-content {
     overflow: auto;
     background-color: #EBEBEB;
     padding: 0 10px;
     border: none;
 }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-select {
+    appearance: none;
+    outline: none;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dropdown-select:focus {
+    border-color: #007bff;
+}
+
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 4px 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-option {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-option:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown-options.visible {
+    display: block;
+}
+
+.add-to-cart-button {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 200px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .add-to-cart-button:active {
+    background-color: #003d80;
+  }
+  
