@@ -63,7 +63,7 @@ const Inventory = () => {
   
   return (
     <div style={{ marginTop: '150px', minHeight: '900px' }}>
-      <div style={{ position: 'relative', marginBottom: '20px' }}>
+      <div style={{ position: 'relative', marginBottom: '20px', overflowX: 'clip' }}>
         <img style={{ position: 'absolute', marginTop: '10px' }} className="mono-cable" src={process.env.PUBLIC_URL + '/images/mono-cable.png'} alt="Mono Cable" />
         <input
           type="text"
@@ -121,7 +121,7 @@ const Inventory = () => {
               <img className="panel-image" src={process.env.PUBLIC_URL + '/images/inventory/' + item.image} alt="Sample Synth 1" />
               <div className="item-info">
                 <p style={{ fontStyle: 'italic', fontSize: 18, margin: 0, marginBottom: '10px' }}>{item.brand} {item.name}</p>
-                <p style={{ margin: 0 }}>$20 Deposit</p>
+                <p style={{ margin: 0 }}>${item.deposit} Deposit</p>
               </div>
             </div>
         ))}
