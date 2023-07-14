@@ -120,8 +120,9 @@ const Inventory = () => {
               <div className="more-info-button">More Info +</div>
               <img className="panel-image" src={process.env.PUBLIC_URL + '/images/inventory/' + item.image} alt="Sample Synth 1" />
               <div className="item-info">
-                <p style={{ fontStyle: 'italic', fontSize: 18, margin: 0, marginBottom: '10px' }}>{item.brand} {item.name}</p>
-                <p style={{ margin: 0 }}>${item.deposit} Deposit</p>
+                {!item.inStock && <p style={{ marginBottom: 5, fontSize: '14px', fontWeight: 'bold', marginTop: 0 }}>Out of Stock</p>}
+                <p style={{ fontStyle: 'italic', fontSize: 18, margin: 0 }}>{item.brand} {item.name}</p>
+                <p style={{ marginTop: 5, marginBottom: 0 }}>${item.deposit} Deposit</p>
               </div>
             </div>
         ))}
@@ -157,6 +158,7 @@ const Inventory = () => {
             <div className="scrollable-content">
               {!reserveInfoVisible &&  (
                 <div>
+                  {!inventoryData?.inventory[selectedItemIndex].inStock && <h3 style={{ fontWeight: 'bold' }}><i>Out of Stock</i></h3>}
                   <p style={{ fontSize: '30px' }}>
                     {inventoryData?.inventory[selectedItemIndex].brand}&nbsp;
                     {inventoryData?.inventory[selectedItemIndex].name}&nbsp;
