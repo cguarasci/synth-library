@@ -3,9 +3,10 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About'
 import Apply from './pages/Apply/Apply';
 import Library from './pages/Library/Library';
+import Calendar from './pages/Calendar/Calendar';
+import Merch from './pages/Merch/Merch';
 import Donate from './pages/Donate/Donate';
 import Error from './pages/Error/Error';
-import Calendar from './pages/Calendar/Calendar';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/apply" element={<Apply />} />
         <Route path="/library" element={<Library />} />
         <Route path="/calendar" element={<Calendar />} />
+        <Route path="/merch" element={<Merch />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/one" element={<Home />} />
         <Route path="/two" element={<Home />} />

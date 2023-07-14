@@ -14,6 +14,8 @@ const Header = ({ activePage }) => {
         <p>|</p>
         <a href="/calendar" className={`white-link ${activePage === 'Calendar' ? 'active' : ''}`}>Calendar</a>
         <p>|</p>
+        <a href="/merch" className={`white-link ${activePage === 'Merch' ? 'active' : ''}`}>Merch</a>
+        <p>|</p>
         <a href="/donate" className={`white-link ${activePage === 'Donate' ? 'active' : ''}`}>Donate</a>
         <div className="dropdown">
           <img style={{ width: '32px', top: 0, left: 0 }} src={process.env.PUBLIC_URL + '/images/empty-avatar.png'} alt="Profile Avatar" />

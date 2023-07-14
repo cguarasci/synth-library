@@ -1,0 +1,12 @@
+.merch-content {
+    margin: 20px;
+    margin-top: 110px;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1%;
+    padding: 20px;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.15);
+    color: black;
+}
