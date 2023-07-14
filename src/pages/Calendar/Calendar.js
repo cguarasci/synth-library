@@ -1,15 +1,15 @@
-import './About.css';
+import './Calendar.css';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 
-const About = () => {
+const Calendar = () => {
   document.documentElement.style.setProperty('--body-background-color', '#E4D3FF');
 
   return (
     <div>
-      <Header activePage="About" />
+      <Header activePage="Calendar" />
       <main>
-        <div class="about-content">
+        <div class="calendar-content">
           <p>Synth Library Orlando is.</p>
           <p>Thank you to our donors.</p>
           <p>We are currently located at.</p>
@@ -21,4 +21,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Calendar;

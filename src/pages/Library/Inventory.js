@@ -5,6 +5,7 @@ import inventoryInfo from '../../utils/inventory.json';
 
 const Inventory = () => {
   const [popupVisible, setPopupVisible] = useState(false);
+  const [reserveInfoVisible, setReserveInfoVisible] = useState(false);
   const [pickupData, setPickupData] = useState(null);
   const [inventoryData, setInventoryData] = useState(null);
   const [selectedItemIndex, setSelectedItemIndex] = useState(null);
@@ -34,6 +35,15 @@ const Inventory = () => {
   const handleSquareClick = (index) => {
     setSelectedItemIndex(index);
     setPopupVisible(true);
+    setReserveInfoVisible(false);
+  };
+
+  const handleReserveClick = () => {
+    setReserveInfoVisible(true);
+  };
+
+  const handleMoreInfoClick = () => {
+    setReserveInfoVisible(false);
   };
   
   const handleClosePopup = () => {
@@ -52,7 +62,7 @@ const Inventory = () => {
   ) || [];
   
   return (
-    <div style={{ marginTop: '150px' }}>
+    <div style={{ marginTop: '150px', minHeight: '900px' }}>
       <div style={{ position: 'relative', marginBottom: '20px' }}>
         <img style={{ position: 'absolute', marginTop: '10px' }} className="mono-cable" src={process.env.PUBLIC_URL + '/images/mono-cable.png'} alt="Mono Cable" />
         <input
@@ -135,21 +145,61 @@ const Inventory = () => {
                   ))}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                  <button>Reserve</button>
+                  {!reserveInfoVisible &&  (
+                    <button onClick={() => handleReserveClick()}>Reserve</button>
+                  )}
+                  {reserveInfoVisible &&  (
+                    <button onClick={() => handleMoreInfoClick()}>More Info</button>
+                  )}
                 </div>
               </div>
             </div>
             <div className="scrollable-content">
-              <p style={{ fontSize: '30px' }}>
-                {inventoryData?.inventory[selectedItemIndex].brand}&nbsp;
-                {inventoryData?.inventory[selectedItemIndex].name}&nbsp;
-                {inventoryData?.inventory[selectedItemIndex].type}
-              </p>
-              <p>
-                {inventoryData?.inventory[selectedItemIndex].description}
-              </p>
+              {!reserveInfoVisible &&  (
+                <div>
+                  <p style={{ fontSize: '30px' }}>
+                    {inventoryData?.inventory[selectedItemIndex].brand}&nbsp;
+                    {inventoryData?.inventory[selectedItemIndex].name}&nbsp;
+                    {inventoryData?.inventory[selectedItemIndex].type}
+                  </p>
+                  <p>
+                    {inventoryData?.inventory[selectedItemIndex].description}
+                  </p>
+                </div>
+              )}
+              {reserveInfoVisible &&  (
+                <div>
+                  <p style={{ fontSize: '30px' }}>
+                    {inventoryData?.inventory[selectedItemIndex].brand}&nbsp;
+                    {inventoryData?.inventory[selectedItemIndex].name}&nbsp;
+                    {inventoryData?.inventory[selectedItemIndex].type}
+                  </p>
+                  <div style={{display: 'flex', flexDirection: 'column'}}>
+                    <p>There is a refundable deposit amount of $20.00.</p>
+                    <form style={{display: 'flex', flexDirection: 'column', gap: '20px'}} action="">
+                      <label for="donations">Would you like to donate your deposit?</label>
+                      <select id="donations" name="donations">
+                        <option value="no">No, I would like to receive my $20 deposit back.</option>
+                        <option value="yes">Yes, donate my $20 deposit.</option>
+                      </select>
+                      <input type="submit" value="Add to Cart" />
+                    </form>
+                    <div>
+                      <h4>Where does my donation go?</h4>
+                      <p>Every bit helps! Your donation helps us cover Paypal transaction fees, costs of repairing damaged gear, and server fees associated with running the library website.</p>
+                    </div>
+                    <div>
+                      <h4>Terms of Use</h4>
+                      <p>Thank you for using our gear library! Once you check out, you will receive an email with pick up instructions. Your three-week rental period begins at the pick up date. At the end of your rental period, you will receive an email with drop off instructions.</p>
+                    </div>
+                    <div>
+                      <p><i>Please reserve a maximum of three items at a time to leave resources for other community members. Once you have your instrument, please handle it with care and respect it as if it were your own! Avoid liquids around gear. If an item is damaged while in your care, you agree to inform us and help pay for its repair if you have the means. Failure to return an item will result in cancellation of your membership.</i></p>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
-            <div><img onClick={handleClosePopup} style={{ cursor: "pointer", height: "30px" }} src={process.env.PUBLIC_URL + '/images/close-icon.png'} alt="Close Icon" /></div>
+            <div><img onClick={handleClosePopup} style={{ cursor: "pointer", height: "30px" }} src={process.env.PUBLIC_URL + '/images/icons/close-icon.png'} alt="Close Icon" /></div>
           </div>
         </div>
       )}

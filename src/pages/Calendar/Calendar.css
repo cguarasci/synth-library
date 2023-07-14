@@ -1,4 +1,4 @@
-.apply-content {
+.calendar-content {
     margin: 20px;
     margin-top: 110px;
     display: flex;
@@ -6,9 +6,6 @@
     border-radius: 1%;
     padding: 20px;
     justify-content: space-between;
-    align-items: center;
-    text-align: center;
     background-color: rgba(0, 0, 0, 0.15);
     color: black;
-    font-size: large;
 }
