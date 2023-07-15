@@ -33,13 +33,16 @@
 }
 
 .full-screen-image {
+  min-height: 800px;
   position: fixed;
   bottom: -90px;
   width: 100%;
   z-index: -1;
+  background-attachment: fixed;
+  background-position: center bottom;
+  overflow-x: hidden;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
 
 .section {
@@ -83,4 +86,23 @@
 .sec-four {
   background-color: white;
   color: black;
+}
+
+
+@media (max-width: 1400px) {
+  .full-screen-image {
+    min-height: 800px;
+    position: fixed;
+    bottom: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 100%;
+    z-index: -1;
+    background-attachment: fixed;
+    background-position: center bottom;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }

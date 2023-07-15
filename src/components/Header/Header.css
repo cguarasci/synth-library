@@ -1,3 +1,33 @@
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    min-height: 90px;
+    width: 100%;
+    background-color: #000000E6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.slo-logo {
+    font-family: Libre Barcode 39 Text;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.header-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-right: 50px;
+    position: relative;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -39,4 +69,32 @@
 
 .white-link.active {
     font-weight: bold;
+}
+
+@media (max-width: 957px) {
+    .header-content {
+        flex-direction: column;
+        padding-left: 0;
+        gap: 0;
+    }
+    .header-links {
+        margin-right: 0;
+    }
+    .slo-logo {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 640px) {
+    .slo-logo {
+        font-size: 30px;
+    }
+    .header-content {
+        padding-left: 0;
+        font-size: small;
+    }
+    .header-links {
+        margin-right: 0;
+        gap: 8px;
+    }
 }

@@ -1,5 +1,6 @@
 {
     "status": 0,
     "phrase": ["Applications Are Open!", "Apply For the Waitlist!", "Applications Are Currently Closed"],
-    "stoplight": ["green-stoplight.png", "yellow-stoplight.png", "red-stoplight.png"]
+    "stoplight": ["green-stoplight.png", "yellow-stoplight.png", "red-stoplight.png"],
+    "glow": ["green-glow", "yellow-glow", "red-glow"]
 }

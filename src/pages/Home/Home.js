@@ -6,19 +6,31 @@ import Footer from '../../components/Footer/Footer';
 const Home = () => {
   useEffect(() => {
     const image = document.querySelector('.full-screen-image');
-    window.addEventListener('scroll', handleScroll);
 
-    function handleScroll() {
+    function applyTransform() {
       const scrollPosition = window.scrollY;
       const rotationFactor = 0.05;
       const rotation = scrollPosition * rotationFactor;
       const scrollFactor = 0.2;
       const scrollTop = scrollPosition * scrollFactor;
-      image.style.transform = `rotate(${rotation}deg) translateY(-${scrollTop}px)`;
+      const translateX = window.innerWidth < 1400 ? 'translateX(-50%)' : '';
+      image.style.transform = `${translateX} rotate(${rotation}deg) translateY(-${scrollTop}px)`;
     }
+
+    function handleScroll() {
+      applyTransform();
+    }
+
+    function handleResize() {
+      applyTransform();
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 

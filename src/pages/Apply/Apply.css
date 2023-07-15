@@ -8,7 +8,46 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.15);
+    /* background-color: rgba(0, 0, 0, 0.15); */
     color: black;
     font-size: large;
+}
+
+.new-window-button {
+    display: inline-block;
+    margin: 15px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #00000066;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.new-window-button:hover {
+    background-color: #00000088;
+}
+
+.new-window-button:active {
+    background-color: #00000088;
+}
+
+.green-glow {
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px 5px rgb(0, 255, 0);
+}
+
+.yellow-glow {
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px 5px rgb(255, 242, 0);
+}
+
+.red-glow {
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px 5px rgb(255, 0, 0);
 }
