@@ -24,7 +24,15 @@
     display: flex;
     gap: 20px;
     align-items: center;
-    margin-right: 50px;
+    position: relative;
+}
+
+.right-header-links {
+    display: flex;
+    gap: 20px;
+    justify-self: center;
+    align-items: center;
+    /* margin-right: 50px; */
     position: relative;
 }
 
@@ -42,14 +50,32 @@
     border: 1px solid #ddd;
     z-index: 1;
     color: black;
-    right: 0; /* Added right: 0 to align with the right edge */
-    top: 36px; /* Adjust the top position as needed */
+    right: 0;
+    top: 36px;
 }
 
 .dropdown:hover .dropdown-content {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.mobile-dropdown-content {
+    display: flex;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 60px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    z-index: 1;
+    color: black;
+    right: 0;
+    top: 36px;
+}
+
+.mobile-dropdown-content.visible {
+    flex-direction: column;
+    display: flex;
 }
 
 .dropdown img {
@@ -65,10 +91,31 @@
 .black-link {
     color: black;
     text-decoration: none;
+    text-align: end;
 }
 
 .white-link.active {
     font-weight: bold;
+}
+
+.profile-nav {
+    margin-right: 20px;
+}
+
+.mobile-nav {
+    display: none;
+    position: relative;
+}
+
+.mobile-nav-icon {
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+}
+
+.profile-nav-icon {
+    cursor: pointer;
+    margin-right: 20px;
 }
 
 @media (max-width: 957px) {
@@ -81,20 +128,33 @@
         margin-right: 0;
     }
     .slo-logo {
-        margin-top: 10px;
+        margin-top: 15px;
+    }
+    .profile-nav {
+        margin-right: 0;
+    }
+    .profile-nav-icon {
+        margin-right: 0px;
     }
 }
 
 @media (max-width: 640px) {
     .slo-logo {
-        font-size: 30px;
+        margin-top: 0px;
+        padding-left: 20px;
+        font-size: 24px;
     }
     .header-content {
-        padding-left: 0;
-        font-size: small;
+        flex-direction: row;
     }
-    .header-links {
-        margin-right: 0;
-        gap: 8px;
+    .right-header-links {
+        display: none;
+    }
+    .mobile-nav {
+        margin-right: 20px;
+        display: block;
+    }
+    .profile-nav {
+        display: none;
     }
 }
