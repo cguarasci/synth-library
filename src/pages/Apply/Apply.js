@@ -23,7 +23,7 @@ const Apply = () => {
             <h2 style={{margin: 0}}>{applicationsData?.['phrase'][applicationsData?.['status']]}</h2>
           </div>
           <p>Please use the email address you would like to use for your account.</p>
-          <a className="new-window-button" href="https://docs.google.com/forms/d/e/1FAIpQLScDoIp3U_wNJFrlGEgBC6RB3b6w4gYuq6Upz9ilz9S8stwqlA/viewform">Open in New Window</a>
+          <a className="new-window-button" href="https://docs.google.com/forms/d/e/1FAIpQLScDoIp3U_wNJFrlGEgBC6RB3b6w4gYuq6Upz9ilz9S8stwqlA/viewform" target="_blank" rel="noopener noreferrer">Open in New Window</a>
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScDoIp3U_wNJFrlGEgBC6RB3b6w4gYuq6Upz9ilz9S8stwqlA/viewform?embedded=true" width="100%" height="725" frameborder="0">Loading…</iframe>
         </div>
         <Footer style={{width: 'fit-content'}} />

@@ -140,7 +140,7 @@ const Inventory = () => {
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'flex-start' }}>
                   {inventoryData?.inventory[selectedItemIndex].links.map((link, i) => (
-                    <a href={link.link} style={{ textDecoration: 'none', color: '#007bff' }} key={i}>
+                    <a href={link.link} style={{ textDecoration: 'none', color: '#007bff' }} target="_blank" rel="noopener noreferrer" key={i}>
                       {link.title}
                     </a>
                   ))}
