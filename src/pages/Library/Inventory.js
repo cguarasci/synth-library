@@ -62,7 +62,7 @@ const Inventory = () => {
   ) || [];
   
   return (
-    <div style={{ marginTop: '150px', minHeight: '900px' }}>
+    <div style={{ marginTop: '150px', minHeight: '900px', minWidth: 'fit-content' }}>
       <div style={{ position: 'relative', marginBottom: '20px', overflowX: 'clip' }}>
         <img style={{ position: 'absolute', marginTop: '10px' }} className="mono-cable" src={process.env.PUBLIC_URL + '/images/mono-cable.png'} alt="Mono Cable" />
         <input
@@ -132,7 +132,7 @@ const Inventory = () => {
           <div className="popup-content" ref={popupRef}>
             <div className="popup-left-panel">
               <img className="popup-image" src={process.env.PUBLIC_URL + '/images/inventory/' + inventoryData?.inventory[selectedItemIndex].image} alt="Sample Synth 2" />
-              <div style={{ width: '500px', height: '15px', backgroundColor: 'black', opacity: '0.5'}}></div>
+              <div className="horizontal-border"></div>
               <div style={{ textAlign: 'start', display: 'flex', flexDirection: 'column', gap: '5px' }}>
                 <p style={{ margin: 0 }}><b>Next Pickup Date:</b> {pickupData?.['next-pickup']}</p>
                 <p style={{ margin: 0 }}><b>Next Drop-Off Date:</b> {pickupData?.['next-dropoff']}</p>

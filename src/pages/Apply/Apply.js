@@ -26,7 +26,7 @@ const Apply = () => {
           <a className="new-window-button" href="https://docs.google.com/forms/d/e/1FAIpQLScDoIp3U_wNJFrlGEgBC6RB3b6w4gYuq6Upz9ilz9S8stwqlA/viewform">Open in New Window</a>
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScDoIp3U_wNJFrlGEgBC6RB3b6w4gYuq6Upz9ilz9S8stwqlA/viewform?embedded=true" width="100%" height="725" frameborder="0">Loading…</iframe>
         </div>
-        <Footer />
+        <Footer style={{width: 'fit-content'}} />
       </main>
     </div>
   );

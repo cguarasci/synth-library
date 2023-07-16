@@ -1,7 +1,13 @@
 .donate-content {
     margin: 30px;
-    margin-top: 100px;
+    margin-top: 120px;
     color: white;
     display: flex;
     gap: 100px;
+}
+
+@media (max-width: 957px) {
+    .donate-content {
+      flex-direction: column;
+    }
 }
