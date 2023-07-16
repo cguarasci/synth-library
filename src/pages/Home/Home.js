@@ -76,9 +76,18 @@ const Home = () => {
               </svg> */}
             </div>
           </div>
-          <div class="section sec-three" id="section3">
-            Contact Us
-          </div>
+          {/* <div class="section sec-three" id="section3">
+            <div class="contact-container">
+              <h2 class="contact-title">Contact Us</h2>
+              <p class="contact-description">We would love to hear from you. Please fill out the form below and we'll get back to you as soon as possible.</p>
+              <form class="contact-form" action="#" method="post">
+                <input class="contact-input" type="text" name="name" placeholder="Your Name" required/>
+                <input class="contact-input" type="email" name="email" placeholder="Your Email" required/>
+                <textarea class="contact-input contact-textarea" name="message" placeholder="Your Message" required></textarea>
+                <button class="contact-button" type="submit">Send Message</button>
+              </form>
+            </div>
+          </div> */}
           {/* <div class="section sec-four" id="section4">
             Content 4
           </div> */}
