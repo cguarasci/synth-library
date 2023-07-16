@@ -10,7 +10,7 @@ const Footer = ({ activePage }) => {
         window.location.href = `mailto:${email}`;
     };
     return (
-        <div style={{ display: 'flex', justifyContent: 'space-between', gap: '20px', alignItems: 'center', inHeight: '90px', width: '100%', backgroundColor: '#000000', color: '#fff', zIndex: '1'}}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', gap: '20px', alignItems: 'center', minHeight: '60px', width: '100%', backgroundColor: '#000000', color: '#fff', zIndex: '1'}}>
             {/* ?subject=${encodeURIComponent(subject)} */}
             <a className='white-link' style={{ padding: '20px' }} href={`mailto:${email}`} onClick={handleEmailClick}>{email}</a>
             <div style={{ paddingRight: '20px', display: 'flex', gap: '20px', alignItems: 'center' }}>
