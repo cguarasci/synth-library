@@ -38,32 +38,32 @@ const Home = () => {
     <div>
       <Header activePage="Home" />
       <main>
-        <img class="full-screen-image" src={process.env.PUBLIC_URL + '/images/homepagebackground.jpg'} alt="Homepage Background" />
-        <div class="section-folder">
-          <div class="section sec-one" id="section1">
+        <img className="full-screen-image" src={process.env.PUBLIC_URL + '/images/homepagebackground.jpg'} alt="Homepage Background" />
+        <div className="section-folder">
+          <div className="section sec-one" id="section1">
           </div>
-          <div class="section sec-two" id="section2">
-            <div class="knob-row">
+          <div className="section sec-two" id="section2">
+            <div className="knob-row">
               <div>
-                <img class="knob" src={process.env.PUBLIC_URL + '/images/icons/knobs/attack.png'} alt="Attack Knob" />
-                <p class="knob-label">ATTACK</p>
+                <img className="knob" src={process.env.PUBLIC_URL + '/images/icons/knobs/attack.png'} alt="Attack Knob" />
+                <p className="knob-label">ATTACK</p>
               </div>
               <div>
-                <img class="knob" src={process.env.PUBLIC_URL + '/images/icons/knobs/decay.png'} alt="Decay Knob" />
-                <p class="knob-label">DECAY</p>
+                <img className="knob" src={process.env.PUBLIC_URL + '/images/icons/knobs/decay.png'} alt="Decay Knob" />
+                <p className="knob-label">DECAY</p>
               </div>
               <div>
-                <img class="knob" src={process.env.PUBLIC_URL + '/images/icons/knobs/sustain.png'} alt="Sustain Knob" />
-                <p class="knob-label">SUSTAIN</p>
+                <img className="knob" src={process.env.PUBLIC_URL + '/images/icons/knobs/sustain.png'} alt="Sustain Knob" />
+                <p className="knob-label">SUSTAIN</p>
               </div>
               <div>
-                <img class="knob" src={process.env.PUBLIC_URL + '/images/icons/knobs/release.png'} alt="Release Knob" />
-                <p class="knob-label">RELEASE</p>
+                <img className="knob" src={process.env.PUBLIC_URL + '/images/icons/knobs/release.png'} alt="Release Knob" />
+                <p className="knob-label">RELEASE</p>
               </div>
             </div>
-            <div class="sec-two-text">
-              <h2 class="sec-two-header">What Is Synth Library Orlando?</h2>
-              <p class="sec-two-description">Synth Library Orlando is a lending library of synthesizers, recording equipment, modular gear and other electronic musical instruments. 
+            <div className="sec-two-text">
+              <h2 className="sec-two-header">What Is Synth Library Orlando?</h2>
+              <p className="sec-two-description">Synth Library Orlando is a lending library of synthesizers, recording equipment, modular gear and other electronic musical instruments. 
               We are a membership organization committed to community and education, and increasing access to music technology, especially to those who may be under-represented in these fields/who may not otherwise be able to afford. 
               Membership is free and members have access to borrow instruments to take home for four weeks.*I took this from Synth Library NYC because I'm too lazy to write mine right now but I'll fix it in a bit.</p>
               {/* <svg viewBox="0 0 2000 300">

@@ -3,6 +3,8 @@ import './Inventory.css';
 import pickupInfo from '../../utils/pickup-info.json';
 import inventoryInfo from '../../utils/inventory.json';
 
+const ITEMS_PER_PAGE = 40;
+
 const Inventory = () => {
   const [popupVisible, setPopupVisible] = useState(false);
   const [reserveInfoVisible, setReserveInfoVisible] = useState(false);
@@ -10,6 +12,7 @@ const Inventory = () => {
   const [inventoryData, setInventoryData] = useState(null);
   const [selectedItemIndex, setSelectedItemIndex] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
   const popupRef = useRef(null);
 
   document.documentElement.style.setProperty('--body-background-color', '#E4D3FF');
@@ -53,6 +56,7 @@ const Inventory = () => {
 
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value);
+    setCurrentPage(1);
   };
 
   const filteredInventory = inventoryData?.inventory.filter((item) =>
@@ -60,6 +64,16 @@ const Inventory = () => {
     item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
     item.type.toLowerCase().includes(searchQuery.toLowerCase())
   ) || [];
+
+  // Calculate the total number of pages
+  const totalPages = Math.ceil(filteredInventory.length / ITEMS_PER_PAGE);
+
+  // Calculate the start and end index of items for the current page
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+
+  // Get the items for the current page
+  const itemsForCurrentPage = filteredInventory.slice(startIndex, endIndex);
   
   return (
     <div style={{ marginTop: '150px', minHeight: '900px', minWidth: 'fit-content' }}>
@@ -111,11 +125,11 @@ const Inventory = () => {
         </div>
       </div>
       <div className="panel-array">
-        {filteredInventory.map((item, index) => (
+        {itemsForCurrentPage.map((item, index) => (
             <div
               key={index}
               className="panel"
-              onClick={() => handleSquareClick(index)}
+              onClick={() => handleSquareClick(index + startIndex)}
             >
               <div className="more-info-button">More Info +</div>
               <img className="panel-image" src={process.env.PUBLIC_URL + '/images/inventory/' + item.image} alt="Sample Synth 1" />
@@ -212,6 +226,25 @@ const Inventory = () => {
           </div>
         </div>
       )}
+      <div>
+        {totalPages > 1 && (
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+            <button
+              disabled={currentPage === 1}
+              onClick={() => setCurrentPage(currentPage - 1)}
+            >
+              Previous Page
+            </button>
+            <span style={{ margin: '0 10px' }}>Page {currentPage} of {totalPages}</span>
+            <button
+              disabled={currentPage === totalPages}
+              onClick={() => setCurrentPage(currentPage + 1)}
+            >
+              Next Page
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

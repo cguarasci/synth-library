@@ -9,7 +9,7 @@ const Merch = () => {
     <div>
       <Header activePage="Merch" />
       <main>
-        <div class="merch-content">
+        <div className="merch-content">
           <p>Synth Library Orlando is.</p>
           <p>Thank you to our donors.</p>
           <p>We are currently located at.</p>

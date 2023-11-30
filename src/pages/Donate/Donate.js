@@ -7,7 +7,7 @@ const Donate = () => {
     <div>
       <Header activePage="Donate" />
       <main>
-        <div class="donate-content">
+        <div className="donate-content">
           <div width="300px">
             <h2>Donate Equipment (New or Used)</h2>
             <p>DonateLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor sagittis dapibus. In eget ipsum orci. Ut ut metus odio. Suspendisse potenti. Nulla volutpat lectus ut ex sollicitudin, ac egestas mauris feugiat. Quisque efficitur eu arcu eget congue. Mauris volutpat elit non sollicitudin aliquet. Pellentesque ac sem eget enim lacinia sollicitudin id id turpis. Nulla elementum est at dolor pretium ullamcorper.</p>
@@ -18,7 +18,7 @@ const Donate = () => {
           </div>
           <div>
             <h2>Donate Funds</h2>
-            <iframe class="wuksD5" frameBorder="0" title="Embedded Content" name="htmlComp-iframe" style={{postion: 'absolute', alignContent: 'center'}} width="400px" height="800px" data-src="" src="https://www-musohealth-org.filesusr.com/html/2a5a06_a54c0a99e62a08a59d264b5eeba61bcf.html"></iframe>
+            <iframe className="wuksD5" frameBorder="0" title="Embedded Content" name="htmlComp-iframe" style={{postion: 'absolute', alignContent: 'center'}} width="400px" height="800px" data-src="" src="https://www-musohealth-org.filesusr.com/html/2a5a06_a54c0a99e62a08a59d264b5eeba61bcf.html"></iframe>
           </div>
         </div>
         <Footer />

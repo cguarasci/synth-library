@@ -9,7 +9,7 @@ const About = () => {
     <div>
       <Header activePage="About" />
       <main>
-        <div class="about-content">
+        <div className="about-content">
           <p>Synth Library Orlando is.</p>
           <p>Thank you to our donors.</p>
           <p>We are currently located at.</p>

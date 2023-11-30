@@ -15,7 +15,8 @@
 }
 
 .slo-logo {
-    font-family: Libre Barcode 39 Text;
+    font-family: 'Libre Barcode 39 Text';
+    font-size: 48px;
     margin: 0;
     padding: 10px 0;
 }

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import WebFont from 'webfontloader';
 import './Header.css';
 
 const Header = ({ activePage }) => {
@@ -8,6 +9,14 @@ const Header = ({ activePage }) => {
 
   const handleMobileNavClick = () => setShowMobileNav(!showMobileNav);
   const handleProfileNavClick = () => setShowProfileNav(!showProfileNav);
+
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ['Libre Barcode 39 Text']
+      }
+    });
+  }, []);
 
   return (
     <header className='header-content'>
