@@ -63,9 +63,7 @@ const Home = () => {
             </div>
             <div className="sec-two-text">
               <h2 className="sec-two-header">What Is Synth Library Orlando?</h2>
-              <p className="sec-two-description">Synth Library Orlando is a lending library of synthesizers, recording equipment, modular gear and other electronic musical instruments. 
-              We are a membership organization committed to community and education, and increasing access to music technology, especially to those who may be under-represented in these fields/who may not otherwise be able to afford. 
-              Membership is free and members have access to borrow instruments to take home for four weeks.*I took this from Synth Library NYC because I'm too lazy to write mine right now but I'll fix it in a bit.</p>
+              <p className="sec-two-description">Synth Library Orlando is a lending library, coming soon, for electronic music equipment and tools for locals living in Orlando, Florida. We are here to bring cost prohibitive music resources (like synthesizers) to the community of Orlando. Check out equipment, totally free, for 4 weeks at a time.</p>
               {/* <svg viewBox="0 0 2000 300">
                 <path
                   d="M0,50 C250,100 250,0 500,0 S750,100 1000,100 1250,0 1500,0 S1750,100 2000,100"
