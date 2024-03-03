@@ -13,7 +13,7 @@ const Header = ({ activePage }) => {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ['Libre Barcode 39 Text']
+        families: ['Libre Barcode 39 Text', 'Gothic A1']
       }
     });
   }, []);

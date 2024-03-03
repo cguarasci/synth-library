@@ -1,5 +1,47 @@
+.errorMessage {
+    margin: auto;
+    margin-top: auto;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.errorMessage404 {
+    font-size: 48px;
+}
+
+.button {
+    background-color: #8a75ad;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+.button:hover {
+    background-color: #593f81;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
 .content {
-    margin: 20px;
-    margin-top: 100px;
-    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.footer {
+    background-color: #f0f0f0;
+    width: 100%;
 }

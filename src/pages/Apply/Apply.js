@@ -13,6 +13,8 @@ const Apply = () => {
     setApplicationsData(applicationsInfo);
   }, []);
 
+  const formLink = 'https://docs.google.com/forms/d/e/1FAIpQLSfWhKX-L4MtXFn49GVEZ-Clu23JjqgYzA7KtN06II6qDtsyCg/viewform';
+
   return (
     <div>
       <Header activePage="Apply" />
@@ -23,8 +25,8 @@ const Apply = () => {
             <h2 style={{margin: 0}}>{applicationsData?.['phrase'][applicationsData?.['status']]}</h2>
           </div>
           <p>Please use the email address you would like to use for your account.</p>
-          <a className="new-window-button" href="https://docs.google.com/forms/d/e/1FAIpQLScDoIp3U_wNJFrlGEgBC6RB3b6w4gYuq6Upz9ilz9S8stwqlA/viewform" target="_blank" rel="noopener noreferrer">Open in New Window</a>
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScDoIp3U_wNJFrlGEgBC6RB3b6w4gYuq6Upz9ilz9S8stwqlA/viewform?embedded=true" width="100%" height="725" title="Application Form" frameborder="0">Loading…</iframe>
+          <a className="new-window-button" href={formLink} target="_blank" rel="noopener noreferrer">Open in New Window</a>
+          <iframe src={formLink + '?embedded=true'} width="100%" height="725" frameborder="0" title="Application Form">Loading…</iframe>
         </div>
         <Footer style={{width: 'fit-content'}} />
       </main>
