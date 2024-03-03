@@ -6,7 +6,7 @@ import Footer from '../../components/Footer/Footer';
 const Home = () => {
   useEffect(() => {
     const image = document.querySelector('.full-screen-image');
-
+  
     function applyTransform() {
       const scrollPosition = window.scrollY;
       const rotationFactor = 0.05;
@@ -16,18 +16,20 @@ const Home = () => {
       const translateX = window.innerWidth < 1400 ? 'translateX(-50%)' : '';
       image.style.transform = `${translateX} rotate(${rotation}deg) translateY(-${scrollTop}px)`;
     }
-
+  
     function handleScroll() {
       applyTransform();
     }
-
+  
     function handleResize() {
       applyTransform();
     }
 
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
-
+  
+    applyTransform();
+  
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
