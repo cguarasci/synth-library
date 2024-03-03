@@ -24,7 +24,7 @@ const Home = () => {
     function handleResize() {
       applyTransform();
     }
-
+  
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
   
